@@ -6,7 +6,7 @@ public class Counter1 : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _text;
 
-    bool isWorck = true;
+    private bool _isWork = true;
 
     private void Start()
     {
@@ -23,7 +23,7 @@ public class Counter1 : MonoBehaviour
 
         while (true)
         {
-            if (isWorck)
+            if (_isWork)
             {
                 DisplayCountdown(number++);
                 yield return wait;
@@ -42,13 +42,13 @@ public class Counter1 : MonoBehaviour
 
     public void Click()
     {
-        if (isWorck)
+        if (_isWork)
         {
-            isWorck = false;
+            _isWork = false;
         }
         else
         {
-            isWorck = true;
+            _isWork = true;
         }
     }
 }
